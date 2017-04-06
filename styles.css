@@ -1,0 +1,14 @@
+#canvas{
+  background-color:pink;
+  height: 800px;
+  width: 800px;
+}
+.square{
+  background-color: red;
+  color: red;
+  height: 50px;
+  width: 50px;
+  outline-style:solid;
+  outline-color:black;
+  display:inline-block;
+}
