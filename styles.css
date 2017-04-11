@@ -2,7 +2,7 @@
 #canvas{
   height: 800px;
   width: 800px;
-  margin-top: 20px; 
+  margin-top: 20px;
   outline-color: black;
   outline-style: solid;
 }
@@ -10,7 +10,6 @@
   height: 50px;
   width: 50px;
   display:inline-block;
-  outline-style: solid;
 }
 .buttons{
   height: 8px;

@@ -1,7 +1,7 @@
 //Variables
 const defaultPixels = 16;
 const canvasSize = 800;
-var square;
+
 //Functions
 //Build Board -- Builds the basic board to be used for the drawing project
 function buildBoard(pixels){
@@ -11,6 +11,7 @@ function buildBoard(pixels){
 }}
 };
 
+//Resize Board -- determines the size of each pixel when resizing the board.
 function resizeBoard(pixels) {
   if (pixels > 0 && pixels < 31) {
     //Gives the original canvas size divided by pixels to yield
@@ -24,11 +25,13 @@ function resizeBoard(pixels) {
   }
 };
 
+//Removes all of the current squares on the board by the square class.
 function resetBoard(){
   //Delete Squares in board
   $('.square').detach();
 };
 
+//Validates whether there is a functional number of pixels on the board.
 function validPixels(pixels){
   if(pixels > 0 && pixels < 31){
     return true;
@@ -38,15 +41,11 @@ function validPixels(pixels){
 };
 //
 
-//Document ready Ready
+//Document Ready
 $(document).ready(function () {
 
 //Build Board
-//Technically don't even need the i and y's if you just do 16*16 and
-//adjust board size to fit.
 buildBoard(defaultPixels);
-
-//Determine Trace functionality
 
 //Event handlers have to exist at the time they're called so don't use
 // ('.square').on(...) instead use this
@@ -55,7 +54,6 @@ $(document).on('mouseenter','.square',function (){
 })
 
 //Board Size button
-
 $('#boardSize').on('click', function (){
   //Ask how many pixels
   var pixels = window.prompt("How many pixels should each side be?");
@@ -66,6 +64,8 @@ $('#boardSize').on('click', function (){
     //resize the board
     buildBoard(pixels);
     resizeBoard(pixels);
+  } else {
+    window.alert("This is an improper amount of pixels per side. Please choose a number between 1 and 30");
   }
 })
 
@@ -81,6 +81,4 @@ $('.buttons').mouseenter( function () {
 $('.buttons').mouseleave(function(){
   $(this).css('background-color', 'white')
 })
-
-
 });
