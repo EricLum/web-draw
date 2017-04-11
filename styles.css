@@ -1,20 +1,25 @@
+
 #canvas{
   height: 800px;
   width: 800px;
+  margin-top: 20px; 
+  outline-color: black;
+  outline-style: solid;
 }
 .square{
   height: 50px;
   width: 50px;
-  outline-color: black;
+  display:inline-block;
   outline-style: solid;
-  display:inline-block;
 }
-.hover{
-  color:red;
-  background-color: red;
-  height:50px;
-  width: 50px;
-  outline-style:solid;
-  outline-color:black;
-  display:inline-block;
+.buttons{
+  height: 8px;
+  width: 100px;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  margin: 0;
+  border: 0;
+  outline-style: groove;
+  display: inline-block
 }
